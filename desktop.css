@@ -1,0 +1,222 @@
+@charset "UTF-8";
+/* Cascading Style Sheet
+   Colour scheme (Adobe Color): #D99437, #23B7D9, #1FA65A, #F2E2CE, #8176D7
+   WCAG AA contrast variants: #8A5A1E (nav), #0F7A3E (hover),
+                              #10526B (h3), #4A3F94 (labels) */
+    
+    /*
+   DESKTOP.CSS — viewport: 960px and wider
+   
+   Layout strategy: fixed 960px wrapper (standard 960 grid).
+   Nav: horizontal bar with content-sized items.
+   Figures: floated beside text (aside floats right, profile floats left).
+   Loaded only when browser width is 960px+. Tablet and phone get their
+   own separate stylesheets via media queries in each HTML file.
+   */
+
+body {
+    font-family: 'JetBrains Mono', "Roboto", sans-serif;
+    background-color: #F2E2CE;
+    color: #101010;
+    padding: 0;
+    margin: 0;
+}
+
+#wrapper {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+}
+
+header, footer {
+    background-color: #8176D7;
+    color: #ffffff;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#banner {
+    padding: 25px 20px;
+    background: #8176D7;                                            /* fallback */
+    background: linear-gradient(to bottom, #8176D7 0%, #23B7D9 100%);
+}
+
+#banner h1 {
+    margin: 0;
+    color: #ffffff;
+}
+
+#banner .subtitle {
+    margin: 5px 0 0;
+    color: #ffffff;
+    font-style: italic;
+}
+
+#page-nav {
+    background-color: #8A5A1E;          /* darkened orange for WCAG AA contrast */
+    overflow: hidden;                   /* clears the floated <li>s */
+}
+#page-nav ul {
+    list-style: none;                   /* remove bullets */
+    margin: 0;
+    padding: 0;
+}
+#page-nav li {
+    float: left;                        /* side-by-side (Week 3 float technique) */
+}
+#page-nav a {
+    display: block;                     /* whole <li> becomes clickable */
+    padding: 12px 24px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;   /* smooth hover */
+}
+#page-nav a:hover, #page-nav a.active {
+    background-color: #0A5C2F;          /* darkened green for WCAG AA contrast */
+    color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+    margin: 15px 0;
+}
+
+main h2 {
+    color: #8176D7;
+    border-bottom: 2px solid #D99437;
+    padding-bottom: 5px;
+}
+
+main h3 {
+    color: #10526B;                     /* darkened teal for contrast */
+}
+
+aside {
+    background-color: #F2E2CE;
+    float: right;
+    width: 300px;
+    margin: 0 0 15px 20px;
+    padding: 10px 15px;
+}
+
+figure {
+    width: 220px;
+    background-color: #F2E2CE;
+    margin: 5px;
+    padding: 8px;
+    border: 1px solid #1d1d1d;
+}
+figure.profile {
+    float: left;
+    width: 300px;
+    margin: 0 20px 15px 0;
+}
+figure img {
+    width: 100%;
+    display: block;
+}
+figcaption {
+    background-color: #8176D7;
+    color: #ffffff;
+    padding: 6px 8px;
+    text-align: center;
+}
+
+/* Project figures — thumbnails inside project sections */
+figure.project-figure {
+    width: 240px;
+    margin: 10px 0;
+    background-color: #F2E2CE;
+    padding: 6px;
+    border: 1px solid #23B7D9;
+}
+figure.project-figure img {
+    width: 100%;
+    display: block;
+}
+figure.project-figure figcaption {
+    font-size: 1em;
+    background-color: #8176D7;
+    color: #ffffff;
+    padding: 4px 6px;
+    text-align: center;
+}
+
+.project {
+    margin-bottom: 20px;
+    padding: 12px 18px;
+    background-color: #F2E2CE;
+    border-left: 5px solid #1FA65A;
+}
+
+/* Angled (45°) linear gradient — required by rubric section 2b.
+   Used on the "Projects" intro section in Projects.html. */
+.subtitle-angled {
+    padding: 30px 20px;
+    margin: 20px 0;
+    color: #ffffff;
+    background: #D99437;                                            /* fallback */
+    background: linear-gradient(45deg, #D99437 0%, #8176D7 100%); /* angled */
+    border-radius: 8px;
+}
+
+video {
+    margin: 15px 0;
+    padding: 8px;
+    background-color: #222222;
+    border: 2px solid #23B7D9;
+    box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.3);
+    max-width: 100%;                    /* prevents overflow on narrow viewports */
+}
+
+/* Form elements on contact.html. */
+form label {
+    font-weight: bold;
+    color: #4A3F94;                     /* darkened purple for contrast */
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form textarea {
+    padding: 8px;
+    border: 1px solid #23B7D9;
+    font-family: inherit;               /* keeps JetBrains Mono inside inputs */
+    font-size: 1em;
+    width: 90%;
+    max-width: 450px;
+}
+form input[type="submit"],
+form input[type="reset"] {
+    background-color: #D99437;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+    background-color: #0A5C2F;
+    color: #ffffff;
+}
+
+footer {
+    padding: 15px 20px;
+    text-align: center;
+    clear: both;                        /* ensures it drops below any floated content */
+    color: #ffffff;
+}
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+footer address {
+    font-style: normal;                 /* browsers italicise <address> by default */
+    margin-bottom: 5px;
+    color: #ffffff;
+}

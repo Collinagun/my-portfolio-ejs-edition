@@ -1,5 +1,6 @@
-Collin Chiong — Personal Portfolio
-INFR3120 Assignment 2 (Express & EJS)
+# Collin Chiong — Personal Portfolio
+## INFR3120 Assignment 2 (Express & EJS)
+
 A four-page responsive portfolio website refactored from static HTML/CSS into a dynamic Node.js / Express.js application using the EJS templating engine. The site is hosted live on Render.
 
 ## Live Site
@@ -8,12 +9,12 @@ https://my-portfolio-ejs-edition.onrender.com/
 ## GitHub Repository
 https://github.com/Collinagun/my-portfolio-ejs-edition
 
-
 ## Pages
 / (index.ejs) - Home page with Hero Banner and Project Grid
 /about (about.ejs) - About Me, Profile Photo, and Intro Video
 /projects (projects.ejs) - Grid of past projects and assignments
 /contact (contact.ejs) - Styled contact form
+
 
 
 ## Site Structure & Technology

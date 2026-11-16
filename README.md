@@ -63,7 +63,7 @@ Form testing: mailto: action successfully opens the default email client.
 
 
 
-##EJS Features
+## EJS Features
 EJS Partials: <%- include('partials/header') %> and <%- include('partials/footer') %> are used to inject shared layout elements.
 
 EJS Conditional Logic: Used for the navigation bar to apply the active class dynamically based on the page title variable passed from routes/index.js.

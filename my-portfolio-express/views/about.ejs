@@ -1,36 +1,25 @@
 <%- include('partials/header') %>
 
-<article>
-    <h2>Hi, I'm Collin Chiong.</h2>
-
-    <figure class="profile">
-        <img src="/images/Profile_picture.jpg" alt="Profile Photograph of Collin Chiong">
-        <figcaption>Collin Chiong — Web Development Student</figcaption>
-    </figure>
-
-    <p>
-        I am currently a student at Ontario Tech University, in the FBIT Faculty's Technology Management program.
-    </p>
-
-    <p>
-        Outside of class, I like to enjoy playing games, binge watching shows, and recently, sleeping. 
-        I aim to achieve many things during my degree here at Ontario Tech.
-    </p>
-
-    <section>
-        <h3>My Introduction Video</h3>
-        <video 
-        id="video"
-        controls
-        width="480"
-        height="270" 
-        poster="/images/Poster.png"
-        preload="auto">
-            <source src="/images/Intro.mp4" type="video/mp4">
-            Your browser does not support the HTML5 video tag.
-            <a href="/images/Intro.mp4">Download the video instead.</a>
-        </video>
-    </section>
-</article>
+<div class="card-container shadow-lg mt-4 mb-5">
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="/images/Profile_picture.jpg" alt="Profile Photograph" class="img-fluid rounded-circle shadow" style="max-width: 250px; border: 4px solid var(--primary-teal);">
+            <p class="text-muted mt-3 small">Collin Chiong — Web Development Student</p>
+        </div>
+        <div class="col-md-8 text-white">
+            <h2 class="section-title text-start mb-4" style="color: var(--primary-teal);">Hi, I'm Collin Chiong.</h2>
+            <p>I am currently a student at Ontario Tech University, in the FBIT Faculty's Technology Management program.</p>
+            <p>Outside of class, I like to enjoy playing games, binge watching shows, and recently, sleeping. I aim to achieve many things during my degree here at Ontario Tech.</p>
+            
+            <h3 class="mt-5 mb-3" style="color: var(--primary-orange);">My Introduction Video</h3>
+            <div class="ratio ratio-16x9 shadow rounded">
+                <video controls poster="/images/Poster.png">
+                    <source src="/images/Intro.mp4" type="video/mp4">
+                    Your browser does not support the HTML5 video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
 
 <%- include('partials/footer') %>

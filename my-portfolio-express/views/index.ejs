@@ -1,15 +1,73 @@
 <%- include('partials/header') %>
 
-<article>
-    <h2>Welcome to my Portfolio!</h2>
-    <p>
-        I am a student in the FBIT Faculty at Ontario Tech University.
-        This site will provide you with an introduction to myself, my previous projects, and a way to contact me.
-    </p>
+<!-- Hero Section -->
+<div class="hero-section shadow-lg">
+    <div class="row align-items-center">
+        <div class="col-md-3 text-center mb-4 mb-md-0">
+            <img src="/images/Profile_picture.jpg" alt="Collin Chiong" class="profile-pic-hero">
+        </div>
+        <div class="col-md-9">
+            <h2>Welcome to my Portfolio!</h2>
+            <p class="fst-italic" style="color: #F2E2CE;">Student of FBIT Faculty - Web Developer</p>
+            
+            <p class="mt-3">
+                I am a student in the FBIT Faculty at Ontario Tech University.
+                This site will provide you with an introduction to myself, my previous projects, and a way to contact me.
+            </p>
+            <p class="mb-1"><i class="fa-solid fa-envelope"></i> collin.chiong@ontariotechu.net</p>
+            <p class="mb-3"><i class="fa-solid fa-location-dot"></i> Canada</p>
+            
+            <div class="d-flex gap-3 mb-3">
+                <a href="https://github.com/Collinagun" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Projects Preview Grid -->
+<div class="mt-5 p-4 shadow-lg card-container">
+    <h2 class="section-title text-white">Projects</h2>
     
-    <aside>
-        <p>Use the navigation above to explore each page.</p>
-    </aside>
-</article>
+    <div class="row g-4">
+        <!-- Project 1 -->
+        <div class="col-md-4">
+            <div class="card project-card p-3 text-center">
+                <i class="fa-solid fa-palette fa-3x mb-3" style="color: var(--primary-purple);"></i>
+                <h5 style="color: var(--primary-purple);">Art Portfolio (Behance)</h5>
+                <p class="text-muted small">This is a culmination of all the digital art I did when I was in Game Development a few years back.</p>
+                <div class="mt-auto">
+                    <a href="https://www.behance.net/collinchiong" target="_blank" class="btn btn-sm w-100 text-white" style="background-color: var(--primary-purple);">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-md-4">
+            <div class="card project-card p-3 text-center">
+                <i class="fa-solid fa-gamepad fa-3x mb-3" style="color: var(--primary-purple);"></i>
+                <h5 style="color: var(--primary-purple);">Rolling Ball</h5>
+                <p class="text-muted small">A simple game I made in Unity where you roll a ball to collect points. Has player movement and a scoring system.</p>
+                <div class="mt-auto">
+                    <span class="tech-badge" style="background-color: var(--primary-teal);">Unity</span>
+                    <span class="tech-badge" style="background-color: var(--primary-teal);">C#</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-md-4">
+            <div class="card project-card p-3 text-center">
+                <i class="fa-solid fa-robot fa-3x mb-3" style="color: var(--primary-purple);"></i>
+                <h5 style="color: var(--primary-purple);">Mechabogema</h5>
+                <p class="text-muted small">Platformer game I made in Unity with a good team for a final. Has levels and gravity features.</p>
+                <div class="mt-auto">
+                    <span class="tech-badge" style="background-color: var(--primary-teal);">Unity</span>
+                    <span class="tech-badge" style="background-color: var(--primary-teal);">Teamwork</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <%- include('partials/footer') %>

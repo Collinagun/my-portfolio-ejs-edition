@@ -1,65 +1,60 @@
 <%- include('partials/header') %>
 
-<article>
-    <h2>My Projects</h2>
+<h2 class="section-title mt-4 text-start px-3">All Projects</h2>
 
-    <section class="subtitle-angled">
-        <h3>Projects</h3>
-        <p>I have worked on during my time at Ontario Tech</p>
-    </section>
+<div class="card-container shadow-lg mb-5">
+    <div class="row g-4">
+        <!-- Project 1 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card project-card p-3 text-center">
+                <i class="fa-solid fa-palette fa-3x mb-3" style="color: var(--primary-purple);"></i>
+                <h5 style="color: var(--primary-purple);">1. Art Portfolio (Behance)</h5>
+                <p class="text-muted small">This is a culmination of all the digital art I did when I was in Game Development a few years back. Also has a few comic pages I created for term assessments.</p>
+                <div class="mt-auto pt-3">
+                    <a href="https://www.behance.net/collinchiong" target="_blank" class="btn btn-sm w-100 text-white" style="background-color: var(--primary-purple);">View Portfolio</a>
+                </div>
+            </div>
+        </div>
 
-    <section class="project">
-        <h3>1. Art Portfolio (Behance)</h3>
-        <p>
-            This is a culmination of all the digital art I did when I was in Game Development a few years back.
-            Also has a few comic pages I created for term assessments.
-        </p>
-        <p>
-            <a href="https://www.behance.net/collinchiong" target="_blank" rel="noopener">
-                View the Art Portfolio
-            </a>
-        </p>
-    </section>
+        <!-- Project 2 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card project-card p-3 text-center">
+                <i class="fa-solid fa-gamepad fa-3x mb-3" style="color: var(--primary-purple);"></i>
+                <h5 style="color: var(--primary-purple);">2. Rolling Ball</h5>
+                <p class="text-muted small">A simple game I made in Unity where you roll a ball to collect points. Has player movement, player detection, scoring system, etc.</p>
+                <div class="mt-auto">
+                    <span class="tech-badge" style="background-color: var(--primary-teal);">Unity</span>
+                    <span class="tech-badge" style="background-color: var(--primary-teal);">C#</span>
+                </div>
+            </div>
+        </div>
 
-    <section class="project">
-        <h3>2. Rolling Ball</h3>
-        <p>
-            A simple game I made in Unity where you roll a ball to collect points.
-            Has player movement, player detection, scoring system, etc.
-        </p>
-        <figure class="project-figure">
-            <img src="/images/ball_roll.png" alt="Screenshot of the Rolling Ball game">
-            <figcaption>Rolling Ball Example</figcaption>
-        </figure>
-    </section>
+        <!-- Project 3 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card project-card p-3 text-center">
+                <i class="fa-solid fa-robot fa-3x mb-3" style="color: var(--primary-purple);"></i>
+                <h5 style="color: var(--primary-purple);">3. Mechabogema</h5>
+                <p class="text-muted small">Platformer game I made in Unity with a good team for a final in Game Development. Has levels and gravity features.</p>
+                <div class="mt-auto">
+                    <span class="tech-badge" style="background-color: var(--primary-teal);">Unity</span>
+                    <span class="tech-badge" style="background-color: var(--primary-teal);">Teamwork</span>
+                </div>
+            </div>
+        </div>
 
-    <section class="project">
-        <h3>3. Mechabogema</h3>
-        <p>
-            Platformer game I made in Unity with a good team for a final in Game Development.
-            Has levels and gravity features.
-        </p>
-        <figure class="project-figure">
-            <img src="/images/mechabogema.png" alt="Screenshot of the title screen">
-            <figcaption>Mechabogema Title Screen</figcaption>
-        </figure>
-    </section>
-
-    <section class="project">
-        <h3>4. Junkyard Jumpers</h3>
-        <p>
-            Platformer game I made in Unity with a team for a midterm in Game Development.
-            Despite internal differences, we delivered a working prototype with player movement and platform physics.
-        </p>
-        <figure class="project-figure">
-            <img src="/images/protag_jj.png" alt="Screenshot of the protagonist of Junkyard Jumpers">
-            <figcaption>Render of the Protagonist</figcaption>
-        </figure>
-    </section>
-
-    <aside>
-        <p>More projects will appear as I progress through my degree.</p>
-    </aside>
-</article>
+        <!-- Project 4 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card project-card p-3 text-center">
+                <i class="fa-solid fa-person-running fa-3x mb-3" style="color: var(--primary-purple);"></i>
+                <h5 style="color: var(--primary-purple);">4. Junkyard Jumpers</h5>
+                <p class="text-muted small">Platformer game I made in Unity with a team for a midterm. Despite internal differences, we delivered a working prototype with player movement and platform physics.</p>
+                <div class="mt-auto">
+                    <span class="tech-badge" style="background-color: var(--primary-teal);">Unity</span>
+                    <span class="tech-badge" style="background-color: var(--primary-teal);">C#</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <%- include('partials/footer') %>

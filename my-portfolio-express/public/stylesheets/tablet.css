@@ -62,8 +62,9 @@ header, footer {
 }
 
 /* DIFFERENCE FROM DESKTOP: <li> items get width: 25% each so all 4
-   nav links split the row evenly. Better for touch targets —
+   nav links split the row evenly. Better for touch targets — 
    fingers can't aim as precisely as a mouse cursor. */
+/* Fix for Bootstrap interference with navigation */
 #page-nav {
     background-color: #8A5A1E;          /* darkened orange for WCAG AA contrast */
     overflow: hidden;                   /* clears the floated <li>s */
@@ -80,16 +81,14 @@ header, footer {
 }
 #page-nav a {
     display: block;                     /* whole <li> becomes clickable */
-    /* DIFFERENCE FROM DESKTOP: no horizontal padding — <li> width controls it.
-       Slightly taller (14px vs 12px) for easier tapping. */
     padding: 14px 0;
-    color: #ffffff;
-    text-decoration: none;
+    color: #ffffff !important;          /* Forces white text over Bootstrap */
+    text-decoration: none !important;   /* Removes Bootstrap underline */
     transition: background 0.3s, color 0.3s;   /* smooth hover */
 }
 #page-nav a:hover, #page-nav a.active {
     background-color: #0A5C2F;          /* darkened green for WCAG AA contrast */
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 h1, h2, h3, h4, h5, h6, p, li {

@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+<article>
+    <h2>Hi, I'm Collin Chiong.</h2>
+
+    <figure class="profile">
+        <img src="/images/Profile_picture.jpg" alt="Profile Photograph of Collin Chiong">
+        <figcaption>Collin Chiong — Web Development Student</figcaption>
+    </figure>
+
+    <p>
+        I am currently a student at Ontario Tech University, in the FBIT Faculty's Technology Management program.
+    </p>
+
+    <p>
+        Outside of class, I like to enjoy playing games, binge watching shows, and recently, sleeping. 
+        I aim to achieve many things during my degree here at Ontario Tech.
+    </p>
+
+    <section>
+        <h3>My Introduction Video</h3>
+        <video 
+        id="video"
+        controls
+        width="480"
+        height="270" 
+        poster="/images/Poster.png"
+        preload="auto">
+            <source src="/images/Intro.mp4" type="video/mp4">
+            Your browser does not support the HTML5 video tag.
+            <a href="/images/Intro.mp4">Download the video instead.</a>
+        </video>
+    </section>
+</article>
+
+<%- include('partials/footer') %>

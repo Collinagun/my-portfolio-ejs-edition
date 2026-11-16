@@ -1,0 +1,57 @@
+<%- include('partials/header') %>
+
+<article>
+    <h2>Contact Me</h2>
+
+    <form action="mailto:collin.chiong@ontariotechu.net?subject=Feedback"
+    method="post" enctype="text/plain" name="Feedback_form">
+
+        <p>
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname" size="32" placeholder="ex. Adam" required>
+        </p>
+        <p>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname" size="32" placeholder="ex. Sandler" required>
+        </p>
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" size="40" placeholder="ex. adam.sandler@gmail.com" required>
+        </p>
+        <p>
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" size="40" placeholder="123-421-4002"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        </p>
+        <p>
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" cols="60" rows="6"
+                    placeholder="Question, comment, or query..."></textarea>
+        </p>
+
+        <p>
+            <label for="where">How did you find me?</label><br>
+            <select name="where" id="where">
+                <option value="Search engine">Search Engine</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Word of mouth">Word of mouth</option>
+                <option value="Other">Other</option>
+            </select>
+        </p>
+        
+        <fieldset>
+            <legend>Did you like my webpage?</legend>
+            <input type="radio" id="Yradio" name="rating" value="Yes">
+            <label for="Yradio">Yes</label>
+            <input type="radio" id="Nradio" name="rating" value="No">
+            <label for="Nradio">No</label>
+        </fieldset>
+        
+        <p>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+</article>
+
+<%- include('partials/footer') %>

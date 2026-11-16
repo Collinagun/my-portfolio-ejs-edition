@@ -58,6 +58,7 @@ header, footer {
 }
 
 /* PHONE: nav items stack vertically, each a full-width row. */
+/* Fix for Bootstrap interference with navigation */
 #page-nav {
     background-color: #8A5A1E;          /* darkened orange for WCAG AA contrast */
 }
@@ -66,9 +67,7 @@ header, footer {
     margin: 0;
     padding: 0;
 }
-/* PHONE CHANGE: nav items stack vertically.
-   Each <li> is now a full-width row instead of a quarter-width column.
-   This gives the largest possible touch target per link. */
+/* PHONE CHANGE: nav items stack vertically. */
 #page-nav li {
     float: none;                        /* stop floating side-by-side */
     width: 100%;                        /* full width per item */
@@ -78,14 +77,14 @@ header, footer {
 #page-nav a {
     display: block;
     padding: 16px 15px;                 /* larger horizontal padding, taller tap area */
-    color: #ffffff;
-    text-decoration: none;
+    color: #ffffff !important;          /* Forces white text over Bootstrap */
+    text-decoration: none !important;   /* Removes Bootstrap underline */
     font-size: 1.05em;                  /* slightly larger for touch */
     transition: background 0.3s, color 0.3s;
 }
 #page-nav a:hover, #page-nav a.active {
     background-color: #0A5C2F;          /* darkened green for WCAG AA contrast */
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 h1, h2, h3, h4, h5, h6, p, li {
